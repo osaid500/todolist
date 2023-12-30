@@ -1,0 +1,171 @@
+body {
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+}
+
+.father {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #f8edff;
+  width: 100%;
+  max-width: 500px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  border-radius: 12px;
+  font-family: "Poppins";
+  margin: auto;
+  margin-top: 100px;
+  transition: 0.5s;
+}
+
+.header {
+  color: #3d3b40;
+  font-family: "Roboto";
+}
+
+.task-input {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 40px;
+  border: none;
+  background-color: #cddddfb8;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+.task-input:focus {
+  outline: none;
+}
+
+.add-button {
+  padding: 15px 20px;
+  width: 20%;
+  height: 100%;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  background-color: #525ceb;
+  color: #f8edff;
+  font-family: "Roboto";
+  font-weight: bold;
+  transition: all 0.2s;
+  position: absolute;
+  right: 0;
+}
+
+.add-button:hover {
+  background-color: #3540db;
+}
+
+.input-container {
+  position: relative;
+}
+
+.task-container {
+  margin-top: 30px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.checkbox {
+  cursor: pointer;
+  transform: scale(1.5);
+  margin-right: 15px;
+}
+
+.task-text {
+  flex-grow: 1;
+  width: 10px;
+  word-wrap: break-word;
+}
+
+.remove-item {
+  color: gray;
+  cursor: pointer;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: transparent;
+  transition-duration: 0.2s;
+}
+
+.remove-item:hover {
+  background-color: rgb(216, 216, 216);
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    max-width: 400px;
+    margin-top: 60px;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .container {
+    max-width: 350px;
+    margin-top: 50px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .container {
+    max-width: 200px;
+    margin-top: 10px;
+    padding: 15px;
+  }
+
+  .task-container {
+    margin-top: 10px;
+    font-size: 9px;
+  }
+
+  .task-item {
+    padding: 0;
+  }
+
+  .checkbox {
+    transform: scale(1);
+  }
+
+  .remove-item {
+    width: 30px;
+    height: 30px;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add-button {
+    position: static;
+    width: 50%;
+    margin-top: 10px;
+  }
+}
